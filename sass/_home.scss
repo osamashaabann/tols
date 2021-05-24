@@ -1,0 +1,523 @@
+// STORE INFORMATION AND SOCIAL MEDIA
+.store-description{
+    @include flexCenter;
+    flex-direction: column;
+    padding:3rem 1rem;
+    margin-bottom: 1rem;
+
+    &__heading{
+        font-size:3.6rem;
+        color: $color-primary;
+    }
+
+    &__parg{
+        font-size: 1.8rem;
+        color: $color-primary;
+        margin: 0.5rem 0;
+    }
+
+    &__social{
+        list-style: none;
+        @include flexCenter;
+        text-align: center;
+        margin: 0.6rem 0;
+        direction: ltr;
+        
+    }
+
+    &__link{
+        text-decoration: none;
+        margin-right: 2rem;
+
+        &:link,
+        &:visited{
+            color: $color-primary;
+        }
+
+        &:hover,
+        &:active{
+            color: rgb(85, 59, 100);
+        }
+    
+}
+
+    &__icon{
+        font-size: 3.6rem;
+    }
+}
+
+// Feature box Style
+.feature{
+    direction: ltr;
+    margin-bottom: 4rem;
+
+    &__title-box{
+        margin: 1rem 0;
+        text-align: right;
+        width: 100%;
+    }
+
+    &__title{
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: $color-grey-dark-1;
+        padding: 1rem;
+
+    }
+
+}
+
+// ---- Products Style
+.products{
+    width: 140rem;
+    display: grid;
+    grid-template-rows: 35rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin: 0 auto;
+    padding: 1.4rem;
+
+    @media only screen and (max-width: $bp-largest){
+        width: 75rem;
+        margin: 0 auto;
+        padding: 1rem;
+        grid-template-rows: repeat(2, 35rem);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-small){
+        width: 45rem;
+        margin: 0 auto;
+        padding: 1rem;
+        grid-template-rows: 45rem;
+        grid-template-columns:1fr;
+        grid-gap: 1rem;
+
+    }
+}
+
+.product{
+    @include flexCenter;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0 , 0.2);
+
+
+    &__img{
+        overflow: hidden;
+
+        img{
+            object-fit: cover;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+
+            @media only screen and (max-width: $bp-small){
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &:hover img{
+        transform: scale(1.02);
+    }
+
+    &__name{
+        padding: 1.2rem 0.6rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    &__payment{
+        @include flexCenter;
+        width: 100%;
+        margin: 0 auto;
+        border-top: 1px solid #ddd;
+    }
+
+    &__price{
+        border-right: 1px solid #ddd;
+        width: 100%;
+        flex: 3;
+        padding: 1rem 0;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }   
+
+    &__cart-icon{
+        background-color: rgb(85, 59, 100);
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 2.1rem;
+        flex: 1;
+        padding: 0.8rem 0;
+        outline: none;
+        border: none;
+        transition: all 0.3s ease-in-out;
+
+        &:link,
+        &:visited{
+            color: #fff;
+        }
+
+        &:hover,
+        &:active{
+            cursor: pointer;
+            color: #444;
+            background-color: #fff;
+        }
+    }
+}
+
+// Rcent items style
+.recent{
+
+    margin: 6rem 0;
+
+    &__box{
+        direction: ltr;
+    padding: 1.5rem 0;
+
+    }
+
+    &__title{
+        padding: 1rem;
+        text-align: right;
+    }
+
+    &__title-text{
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: $color-grey-dark-1;
+        padding: 1.2rem 0;
+        margin-bottom: 2rem;
+    }
+
+    
+
+    &__item{
+        border-radius: 3px;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+        color: #333;
+
+
+        &:hover{
+            box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0 , 0.2);
+
+            .recent__picture{
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    &__picture{
+        -webkit-clip-path: polygon(0% 0% , 100% 0% , 100% 90% , 0% 100%);
+        clip-path: polygon(0% 0% , 100% 0% , 100% 90% , 0% 100%);
+        object-fit: cover;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+
+        @media only screen and (max-width: $bp-largest){
+            width: 100%;
+        }
+    }
+
+    &__name{
+        padding: 2rem 0.6rem;
+        text-transform: capitalize;
+        font-size: 2rem;
+    }
+
+    &__cta{
+        @include flexCenter;
+        justify-content: space-between;
+        border-top: 1px solid #ddd;
+    }
+
+    &__price{
+        border-right: 1px solid #ddd;
+        flex: 3;
+        padding: 1rem 0;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+
+/* Slider Div */
+.slider{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slide{
+    max-height: initial;
+    padding: 1.5rem;
+}
+
+.slick-arrow{
+    background-color: $color-primary !important;
+    color: #fff !important;
+}
+
+.slick-prev,
+.slick-next{
+    @include flexCenter;
+    background-color: #000;
+    width: 4.5rem;
+    height: 4.5rem;
+    color: #fff;
+    font-size: 2rem;
+    z-index: 1;
+    box-shadow: 0px .2rem 1.2rem rgba(0, 0, 0, 0.7);
+}
+
+.slick-prev{
+    left: 0;
+}
+
+.slick-next{
+    right: 0;
+}
+
+.slick-prev:hover,
+.slick-next:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.slick-prev:active,
+.slick-next:active{
+    box-shadow: 0px .2rem 1.2rem rgba(0, 0, 0, 0.4);
+}
+
+.slick-next:before {
+    content: '';
+}
+.slick-prev:before {
+    content: '';
+}
+/* Slider Div */
+
+// About-us Section Style
+.about{
+    
+    margin: 0 auto;
+
+
+    @media only screen and (max-width: $bp-medium){
+        padding: 2rem 0;
+    }
+
+    
+
+    &__box{
+        background-color: #f7f7f7;
+        display: grid;
+        grid-template-rows: initial;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+
+        @media only screen and (max-width: 648px){
+            grid-template-columns: 1fr;
+            grid-template-rows: initial;
+            grid-gap: 8px;
+        }
+
+    }
+
+    &__details{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        padding: 1.8rem 1rem;
+
+
+        &-title{
+            font-size: 3rem;
+            color: $color-grey-dark-1;
+            margin-bottom: 2.2rem;         
+        }
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        color: #333;
+        margin-bottom: 2.5rem;
+    }
+    
+    &__social{
+        margin: 0 auto;
+        @include flexCenter;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    &__link{
+        text-decoration: none;
+        font-size: 2.4rem;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        transition: all .2s ease-in-out;
+
+        &:not(last-child){
+            margin-right: 1.2rem;
+        }
+
+        &:link,
+        &:visited{
+            color: $color-primary;
+        }
+
+        &:hover,
+        &:active{
+            color: #fff;
+        }
+    }
+
+    &__twitter{
+        color: #1DA1F2;
+
+        &:hover{
+            background-color: #1DA1F2;
+        }
+    }
+    &__facebook{
+        color: #3B5998;
+
+        &:hover{
+            background-color: #3B5998;
+        }
+    }
+
+    &__instagram{
+        color: #C13584
+        ;
+
+        &:hover{
+            background-color: #C13584;
+        }
+    }
+    
+    &__snapchat{
+        color: #FFFC00;
+
+        &:hover{
+            background-color: #fffb00f6;
+        }
+    }
+
+    &__gmail{color: #C71610;
+
+        &:hover{
+            background-color: #C71610;
+        }}
+
+    &__whatsapp{
+        color: #25D366;
+
+        &:hover{
+            background-color: #25D366;
+        }
+    }
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 1.8rem 1rem;
+
+
+    
+    &__title{
+        font-size: 3rem;
+        color: $color-grey-dark-1;
+        margin-bottom: 2.2rem;  
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        li{
+            margin-bottom: .4rem;
+        }
+
+        span{
+            margin-left: 1rem;
+        }
+    }
+
+    &__text{
+        color: #333;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:link,
+        &:visited{
+            color: #333;
+        }
+
+        &:visited,
+        &:active{
+            color: rgb(63, 63, 63);
+        }
+    }
+
+    &__payments{
+        @include flexCenter;
+        list-style: none;
+        width: 100%;
+
+    }
+
+    &__link{
+        &:not(last-child){
+            margin-left: 1.8rem;
+        }
+
+        img{
+            height: 3.8rem;
+            width: 5rem;
+        }
+    }
+}
+
+// Store Footer Style
+.footer{
+    @include flexCenter;
+    
+    &__link{
+        padding: 2rem 0;
+        font-size: 2rem;
+        
+
+        &:link,
+        &:visited{
+            color:#333;
+            text-decoration: non;
+        }
+
+        &:hover,
+        &:active{
+            color: #333;
+        }
+    }
+
+    &__heart{
+        color: #f00;
+    }
+}
+
+
+
+
+
+

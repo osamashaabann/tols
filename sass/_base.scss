@@ -1,0 +1,73 @@
+//COLORS--------
+$color-primary: #eb2f64;
+$color-primary-light: #FF3366;
+$color-primary-dark: #BA265D;
+
+
+$color-primary: rgb(99, 68, 117);
+$color-primary-light: #00c3ff;
+$color-primary-dark: #006ad7;
+
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+$color-grey-light-4: #ccc;
+
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// Responisve breakpoints
+$bp-largest: 75em; // 1200px => 1200px/16px
+$bp-large: 62.5em; //1000px => 1000/16px
+$bp-medium: 50em; //800px => 800px/16px
+$bp-small: 38.5em; //600px => 600px / 16px
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 54.5%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
+
+}
+
+body {
+    height: 100vh;
+    font-size: 1.8rem;
+    direction: rtl;
+}
+
+// Mixin
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-container{
+    max-width: 136.5rem;
+    margin: 0 auto;
+}
+
+
